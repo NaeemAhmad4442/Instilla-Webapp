@@ -70,36 +70,38 @@ if(isset($_POST["sub"]))
 	<div class="container">
 		<div class="row">
   			<div class="col-md-8">
-  				
+  				<div class="row">
+  					<div class="col-md-4">
   				<br>
 				<br>
 				<br>
 				<br>
 				<center>
-				<h3>Compare website</h3>
-				<br>
-				<br>
-				<br>
-				<div class="mainbox">
-					<form method="post" action="index.php">
-						First website's URL<br>
-						<input type="url" name="web1" id="web1" onkeydown="countchars()" required="" class="form-control" autocomplete="off" />
-						<br>
-						<br>
-						Second website's URL<br>
-						<input type="url" name="web2" id="web2" onkeydown="countchars()" required="" class="form-control" autocomplete="off"/>
-						<br>
-						<br>
-						<button type="submit" name="sub" class="btn btn-success"> Compare</button>
-					</form>		
-  				</div>
-			</center>
-			</div>
-			
-			<center>
-			Total characters: <input type="number" readonly="" name="" style="width:50; height: 30" id="total" /><br>
-			Sum of indexes: <input type="number" readonly="" name="" style="width:50; height: 30" id="indexes" />
-			</center>
+					<h3>Compare website</h3>
+					<br>
+					<br>
+					<div class="mainbox">
+						<form method="post" action="index.php">
+							First website's URL<br>
+							<input type="url" name="web1" id="web1" onkeydown="countchars()" required="" class="form-control" autocomplete="off" />
+							<br>
+							<br>
+							Second website's URL<br>
+							<input type="url" name="web2" id="web2" onkeydown="countchars()" required="" class="form-control" autocomplete="off"/>
+							<br>
+							<br>
+							<button type="submit" name="sub" class="btn btn-success"> Compare</button>
+						</form>		
+  					</div>
+				</center>
+				</div>
+				<div class="col-md-4">
+					<center>
+						Total characters: <input type="number" readonly="" name="" style="width:50; height: 30" id="total" /><br>
+						Sum of indexes: <input type="number" readonly="" name="" style="width:50; height: 30" id="indexes" />
+					</center>		
+				</div>
+				</div>
 			</div>
 		</div>
 	</div>
