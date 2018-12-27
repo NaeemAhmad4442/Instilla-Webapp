@@ -70,7 +70,7 @@ if(isset($_POST["sub"]))
 	<div class="container">
 		<div class="row">
   			<div class="col-md-8">
-  				<div class="col-md-4">
+  				
   				<br>
 				<br>
 				<br>
@@ -95,7 +95,7 @@ if(isset($_POST["sub"]))
   				</div>
 			</center>
 			</div>
-			<div class="col-md-4 col-md-offset-4">
+			
 			<center>
 			Total characters: <input type="number" readonly="" name="" style="width:50; height: 30" id="total" /><br>
 			Sum of indexes: <input type="number" readonly="" name="" style="width:50; height: 30" id="indexes" />
