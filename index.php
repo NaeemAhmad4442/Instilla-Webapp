@@ -2,14 +2,15 @@
 include('simple_html_dom.php');
 if(isset($_POST["sub"]))
 {
+	//File System
 	$file = fopen('results.csv', 'w');
 	fputcsv($file, array('First Link', 'Second Link', 'percentage'));
-	echo "inside";
+	//Lettura link input
 	$web1 = file_get_html($_POST["web1"]);
 	$web2 = file_get_html($_POST["web2"]);
 	$ArrayIndex_1=0;
 	$ArrayIndex_2=0;
-
+	//Lettura e confronto array
 	foreach($web1->find('a') as $element)
 	{
     	$array[$ArrayIndex_1] = $element->href;
