@@ -53,7 +53,6 @@ if(isset($_POST["sub"]))
 
 <style type="text/css">
 	body {
- background-image: url("bj.pg");
  background-color: #cccccc;
 }
 .mainbox {
@@ -85,8 +84,8 @@ Second website's URL<br>
 <input type="url" name="web2" id="web2" onkeydown="countchars()" required="" class="form-control"/><br><br>
 <button type="submit" name="sub" class="btn btn-success"> Compare</button>
 </form>
-Total characters: <input type="number" readonly="" name="" style="width:30; height: 30" id="total" /><br>
-Sum of indexes: <input type="number" readonly="" name="" style="width:30; height: 30" id="indexes" />
+Total characters: <input type="number" readonly="" name="" style="width:50; height: 30" id="total" /><br>
+Sum of indexes: <input type="number" readonly="" name="" style="width:50; height: 30" id="indexes" />
 </div>
 </center>
 </body>
