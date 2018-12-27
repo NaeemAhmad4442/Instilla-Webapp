@@ -53,50 +53,59 @@ if(isset($_POST["sub"]))
 ?>
 
 <style type="text/css">
-	body {
- background-color: #cccccc;
-}
-.mainbox {
-width: 500px;
-height: 600px;
-}
+
 </style>
 
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-	<title>
-	</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="	sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<title>Instilla-WebApp</title>
 </head>
-<body><br><br><br><br>
-
-<center><h3>Compare website</h3><br><br><br>
-
-<div class="mainbox">
-<form method="post" action="index.php">
-
-First website's URL<br>
-<input type="url" name="web1" id="web1" onkeydown="countchars()" required="" class="form-control"/><br><br>
-Second website's URL<br>
-<input type="url" name="web2" id="web2" onkeydown="countchars()" required="" class="form-control"/><br><br>
-<button type="submit" name="sub" class="btn btn-success"> Compare</button>
-</form>
-Total characters: <input type="number" readonly="" name="" style="width:50; height: 30" id="total" /><br>
-Sum of indexes: <input type="number" readonly="" name="" style="width:50; height: 30" id="indexes" />
-</div>
-</center>
+<body>
+	<br>
+	<br>
+	<br>
+	<br>
+	<center>
+		<h3>Compare website</h3>
+		<br>
+		<br>
+		<br>
+		<div class="mainbox">
+			<form method="post" action="index.php">
+				First website's URL<br>
+				<input type="url" name="web1" id="web1" onkeydown="countchars()" required="" class="form-control" autocomplete="off" />
+				<br>
+				<br>
+				Second website's URL<br>
+				<input type="url" name="web2" id="web2" onkeydown="countchars()" required="" class="form-control" autocomplete="off"/>
+				<br>
+				<br>
+				<button type="submit" name="sub" class="btn btn-success"> Compare</button>
+			</form>
+			Total characters: <input type="number" readonly="" name="" style="width:50; height: 30" id="total" /><br>
+			Sum of indexes: <input type="number" readonly="" name="" style="width:50; height: 30" id="indexes" />
+		</div>
+	</center>
 </body>
 </html>
-<script type="text/javascript">
 
+<script type="text/javascript">
 function countchars()
 {
+//...........................................................
+//............... Counter One ...............................
+//...........................................................
 	var total  = document.getElementById("web1").value.length + document.getElementById("web2").value.length;
 	document.getElementById("total").value = total;
+//...........................................................
+//............... Counter Two ...............................
+//...........................................................
 	textbox1_value = document.getElementById("web1").value;
 	textbox2_value = document.getElementById("web2").value;
 	var sum=0;
@@ -104,9 +113,7 @@ function countchars()
 	{
 		for (var i = 0; i < totalextbox1_value.length; i++)
 		{
-			alert("insidee loop")
-			chari = textbox1_value.charAt(i).toLowerCase();
-			alert(chari)
+			chari = textbox1_value.charAt(i).toLowerCase();	
 			sum +=alphabetPosition(chari);
 			alert(alphabetPosition(chari))
 		}
@@ -121,14 +128,17 @@ function countchars()
 	}
 	document.getElementById("indexes").value = sum;
 }
-function alphabetPosition(text) {
+
+//...........................................................
+//............... alphabetic Index ..........................
+//...........................................................
+function alphabetPosition(text)
+{
   var result = "";
   for (var i = 0; i < text.length; i++) {
     var code = text.toUpperCase().charCodeAt(i)
     if (code > 64 && code < 91) result += (code - 64) + " ";
   }
-
   return result.slice(0, result.length - 1);
 }
-
 </script>
