@@ -94,8 +94,15 @@ if(isset($_POST["sub"]))
 			</div>
 			<div class="col-sm-9 col-md-6">
 				<center>
-					Total characters: <input type="number" readonly="" name="" style="width:50; height: 30" id="total" /><br>
-					Sum of indexes: <input type="number" readonly="" name="" style="width:50; height: 30" id="indexes" />
+					<br><br><br><br><br>
+					<div class="form-group">
+      						<label>Total Characters</label>
+      						<input class="form-control" type="number" readonly="" name="" id="total" disabled>
+    					</div>
+    					<div class="form-group">
+      						<label>Sum of indexes</label>
+      						<input class="form-control"  type="number" readonly="" name="" id="indexes"  disabled>
+    					</div>
 				</center>		
 			</div>
 		</div>
