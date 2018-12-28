@@ -69,7 +69,7 @@ if(isset($_POST["sub"]))
 <body>
 	<div class="container">
 		<div class="row">
-  			<div class="col-sm-3 col-md-6">
+  			<div class="col-sm-3 col-md-6 col-xs-3">
 				<br>
 				<br>
 				<br>
@@ -92,7 +92,7 @@ if(isset($_POST["sub"]))
   					</div>
 				</center>
 			</div>
-			<div class="col-sm-9 col-md-6">
+			<div class="col-sm-9 col-md-6 col-xs-9">
 				<center>
 					<br><br><br><br><br><br><br>
 					<div class="form-group">
